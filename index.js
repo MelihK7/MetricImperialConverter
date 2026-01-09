@@ -28,15 +28,18 @@ function calculate() {
 
     // Length (Meter/feet) section
     let metersToFeet = Number(input * 3.281).toFixed(3)
-    let feetToMeters = Number(input * 0.3048).toFixed(3)
-    lengthP.innerHTML = `${input} meters = ${feetToMeters} | ${input} feet = ${metersToFeet} `
+    let feetToMeters = Number(input / 3.281).toFixed(3)
+    lengthP.innerHTML = `${input} meters = ${metersToFeet} feet | ${input} feet = ${feetToMeters} meters `
 
     //Volume (Liters/Gallons) section
     let litersToGallons = Number(input * 0.264).toFixed(3)
-    let gallonsToLiters = Number(input * 0.3048).toFixed(3)
-    lengthP.innerHTML = `${input} meters = ${feetToMeters} | ${input} feet = ${metersToFeet} `
+    let gallonsToLiters = Number(input / 0.264).toFixed(3)
+    volumeP.innerHTML = `${input} liters = ${litersToGallons} gallons | ${input} gallons = ${gallonsToLiters} liters`
 
     //Mass (Kilograms/Pounds) section
-    
+    let kiloToPounds = Number(input * 2.204).toFixed(3)
+    let poundsToKilos = Number(input / 2.204).toFixed(3)
+
+    massP.innerHTML = `${input} kilos = ${kiloToPounds} pounds | ${input} pounds = ${poundsToKilos} kilos`
 }   
 
