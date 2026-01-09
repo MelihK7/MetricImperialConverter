@@ -65,6 +65,7 @@ body {
     border-radius: 5px;
     background: #FFF;
     border: 2px solid #FFF;
+    cursor: pointer;
 }
 
 #bottom-container {
