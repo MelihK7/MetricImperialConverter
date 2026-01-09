@@ -26,20 +26,35 @@ function calculate() {
 
     input = Number(inputEl.value)
 
+    // Tjekker for flertal eller ental
+    if(input === 1) {
+        meters = "meter"
+        liters = "liter"
+        kilos = "kilo"
+        gallons = "gallon"
+        pounds = "pound"
+    } else {
+        meters = "meters"
+        liters = "liters"
+        kilos = "kilos"
+        gallons = "gallons"
+        pounds = "pounds"
+    }
+
     // Length (Meter/feet) section
     let metersToFeet = Number(input * 3.281).toFixed(3)
     let feetToMeters = Number(input / 3.281).toFixed(3)
-    lengthP.innerHTML = `${input} meters = ${metersToFeet} feet | ${input} feet = ${feetToMeters} meters `
+    lengthP.innerHTML = `${input} ${meters} = ${metersToFeet} feet | ${input} feet = ${feetToMeters} meters `
 
     //Volume (Liters/Gallons) section
     let litersToGallons = Number(input * 0.264).toFixed(3)
     let gallonsToLiters = Number(input / 0.264).toFixed(3)
-    volumeP.innerHTML = `${input} liters = ${litersToGallons} gallons | ${input} gallons = ${gallonsToLiters} liters`
+    volumeP.innerHTML = `${input} ${liters} = ${litersToGallons} gallons | ${input} ${gallons} = ${gallonsToLiters} liters`
 
     //Mass (Kilograms/Pounds) section
     let kiloToPounds = Number(input * 2.204).toFixed(3)
     let poundsToKilos = Number(input / 2.204).toFixed(3)
 
-    massP.innerHTML = `${input} kilos = ${kiloToPounds} pounds | ${input} pounds = ${poundsToKilos} kilos`
+    massP.innerHTML = `${input} ${kilos} = ${kiloToPounds} pounds | ${input} ${pounds} = ${poundsToKilos} kilos`
 }   
 
